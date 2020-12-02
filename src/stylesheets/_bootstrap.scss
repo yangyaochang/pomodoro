@@ -1,0 +1,17 @@
+// BOOTSTRAP
+//
+
+// Variable overrides
+// Must be declared before importing Bootstrap
+
+$theme-colors: (
+    'primary': #1D3557,
+    'primary-light': #A8DADC,
+    'secondary': #E63946,
+    'secondary-light': #F1FAEE,
+    'primary-dark': #457B9D,
+    'white': #ffffff,
+    'black': #000000,
+);
+
+@import '../../node_modules/bootstrap/scss/bootstrap';

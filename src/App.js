@@ -1,8 +1,13 @@
 import React from 'react'
-import './App.css';
+import Todo from './components/todo/Todo'
+import './App.scss';
+
+
+const todos = ['The first thing to do', 'The second thing to do', 'The third thing to do', 'The forth thing to do']
+
 
 function App() {
-  const [remainTime, setRemainTime] = React.useState(20)
+  const [remainTime, setRemainTime] = React.useState(1500)
   const [countDown, setCountDown] = React.useState(false)
 
   React.useEffect(() => {
@@ -25,6 +30,9 @@ function App() {
       <div>
         <div>{ new Date(remainTime * 1000).toISOString().substr(14, 5) }</div>
       </div>
+      { todos.map((todo, index) => 
+        <Todo todo={ todo } key={ index }/>
+      )}
     </div>
   );
 }
